@@ -9,25 +9,24 @@ var users = [
     {id: 8, nombre: 'Perla ', num_eployed: 20237, puesto:'', perfil: ''},
     {id: 9, nombre: 'Alfahir', num_eployed: 20222, puesto:'', perfil: ''}]
 
-function create(res, req) {
+function create(req, res) {
 
 }
 
-function update(res, req) {
+function update(req, res) {
 
 }
 
-function get(res, req) {
-
+function get(req, res) {
+    res.status(200).json(users)
 }
 
-function find(res, req) {
-    console.log(req.params)
+function find(req, res) {
     var id = req.params.id
     let user = users.find(el => el.id == id)
 
     if(user == undefined)
-	    res.status(501).send({error: 'Usuario no encontrado'})
+	    res.status(500).send({error: 'Usuario no encontrado'})
     else
 	    res.status(200).send(user)
 }

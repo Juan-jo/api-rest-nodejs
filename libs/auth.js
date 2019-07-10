@@ -4,6 +4,7 @@
 function verifyJWT(token){
 	return new Promise(function(resolve, reject) {
 		resolve(true)
+		//reject(false)
 	})
 }
 
