@@ -1,7 +1,7 @@
 //import jwt from 'jsonwebtoken'
 
 //Verifica si existe token
-function verifyJWT(token){
+function verifyJWT(token) {
 	return new Promise(function(resolve, reject) {
 		resolve(true)
 		//reject(false)
