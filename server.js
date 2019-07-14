@@ -8,7 +8,5 @@ app.use(bodyParser.json())
 
 require('./app/app.js')(app)
 
-app.listen(PORT, function(){
-    console.log("Hola")
-})
+app.listen(PORT, () => { console.log('Servidor iniciado') })
 

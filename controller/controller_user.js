@@ -1,5 +1,6 @@
 var dbFunctions = require('../database/functions')
-
+var db = require('../database/db')
+var foo = require('../models/foo')
 function create(req, res) {
 
 }
@@ -9,6 +10,8 @@ function update(req, res) {
 }
 
 function get(req, res) {
+    db.get(foo, res)
+    /*
     dbFunctions.methodGetProd()
         .then(function() {
 
@@ -16,7 +19,7 @@ function get(req, res) {
         .catch(function() {
 
         })
-        
+    */    
     //dbFunctions.getUser('', res)
     //res.status(200).json(users)
 }
