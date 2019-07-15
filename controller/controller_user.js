@@ -1,6 +1,6 @@
-var dbFunctions = require('../database/functions')
-var db = require('../database/db')
+var querys = require('../database/querys')
 var foo = require('../models/foo')
+
 function create(req, res) {
 
 }
@@ -10,28 +10,18 @@ function update(req, res) {
 }
 
 function get(req, res) {
-    db.get(foo, res)
-    /*
-    dbFunctions.methodGetProd()
-        .then(function() {
+    var cursor = foo.find({})
+    
+    cursor.find(function(err, collection){
+        console.log('coll', collection)
+    })
 
-        })
-        .catch(function() {
-
-        })
-    */    
-    //dbFunctions.getUser('', res)
-    //res.status(200).json(users)
+    res.status(200).json({message: 'Holis'})
+    //querys.get(foo, res)
 }
 
 function find(req, res) {
-    var id = req.params.id
-    let user = users.find(el => el.id == id)
 
-    if(user == undefined)
-	    res.status(500).send({error: 'Usuario no encontrado'})
-    else
-	    res.status(200).send(user)
 }
 
 function deleter(res, req) {

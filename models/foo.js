@@ -1,5 +1,6 @@
+'use strict'
 const mongoose = require('mongoose')
-const Shema = mongoose.Schema;
+const Shema = mongoose.Schema
 
 const foo = Shema({
     key: String
