@@ -15,5 +15,3 @@ function get(model, res){
 module.exports = {
     get:get
 }
-
-
